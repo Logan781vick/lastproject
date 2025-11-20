@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Child Safety & Awareness Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP BUTTON -->
+  <div class="topbar">
+    <button id="toggleBtn" class="primary">PRESS ME TO SEE Child Safety & Awareness Platform</button>
+    <button id="loginBtn" class="ghost">Admin Login</button>
+  </div>
+
+  <!-- LOGIN MODAL (front-end mock) -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-card">
+      <h3>Admin Login</h3>
+      <input id="loginEmail" type="email" placeholder="email" />
+      <input id="loginPassword" type="password" placeholder="password" />
+      <div class="modal-actions">
+        <button id="doLogin" class="primary">Sign in</button>
+        <button id="closeLogin" class="ghost">Cancel</button>
+      </div>
+      <p class="hint">Hint: use <b>admin@site.com</b> / <b>admin123</b> for demo</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT WRAPPER (hidden until reveal) -->
+  <main id="contentWrapper" class="hidden animated">
+    <header>
+      <h1>Child Safety & Awareness Platform</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tips">Safety Tips</a></li>
+          <li><a href="#report">Report Issue</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="section card">
+      <h2>Welcome</h2>
+      <p>Learn safety tips, report concerns, and access resources for protecting children.</p>
+    </section>
+
+    <section id="tips" class="section card">
+      <h2>Safety Tips</h2>
+      <ul id="tips-list" class="tips-list"></ul>
+    </section>
+
+    <section id="report" class="section card">
+      <h2>Report an Issue</h2>
+      <form id="reportForm" class="form">
+        <input type="text" id="name" placeholder="Your name (optional)" />
+        <textarea id="issue" placeholder="Describe the issue" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="primary">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ADMIN DASHBOARD (hidden, simple placeholder) -->
+    <section id="admin" class="section card hidden">
+      <h2>Admin Dashboard</h2>
+      <p id="adminMsg">No reports yet.</p>
+      <ul id="adminReports"></ul>
+    </section>
+  </main>
+
+  <!-- POPUP ALERT -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
